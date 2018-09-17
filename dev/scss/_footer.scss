@@ -1,0 +1,14 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    height: $footerHeight;
+    border-top: 2px solid $greyColor;
+    background-color: $whiteColor;
+    display: inline-block;
+    
+    p {
+      font-size: 14px;
+      float: right;
+      padding: $freeSpace;
+    }
+}

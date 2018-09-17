@@ -1,0 +1,36 @@
+$blackColor: #333;
+$whiteColor: #fff;
+$greyColor: #e8e8e8;
+$primaryColor: #ffd700;
+$secondaryColor: #d9ab4d;
+$successColor: #87bf0a;
+$errorColor: #e82c0c;
+$headerHeight: 50px;
+$footerHeight: 50px;
+$freeSpace: 15px;
+$borderRadius: 4px;
+
+@import 'reset';
+@import 'grid';
+@import 'forms';
+
+
+html {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    color: $blackColor;
+    background-color: lighten($primaryColor, 48);;
+    padding-top: $headerHeight + $freeSpace;
+  }
+  
+  @import 'header';
+  @import 'main';
+  @import 'components/auth';
+  
