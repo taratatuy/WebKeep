@@ -36,8 +36,11 @@ app.get('/create', (req, res) => {
   res.render('create.ejs');
 });
 app.post('/create', (req, res) => {
+  console.log(req.body);
+  const { createdHead, createdBody } = req.body;
   TextModel.create({
-    text: req.body.createdText
+    header: createdHead,
+    body: createdBody
   });
   res.redirect('/');
 });

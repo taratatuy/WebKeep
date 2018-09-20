@@ -4,7 +4,8 @@ var Schema = mongoose.Schema;
 
 var text = new Schema(
   {
-    text: String
+    header: String,
+    body: String
   },
   {
     timestamps: true

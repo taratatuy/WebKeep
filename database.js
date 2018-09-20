@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 module.exports = () => {
   return new Promise((resolve, reject) => {
     mongoose.Promise = global.Promise;
-    mongoose.set('debug', config.IS_PRODUCTION);
+    mongoose.set('debug', !config.IS_PRODUCTION);
 
     mongoose.connection
       .on('error', error => console.log(error))

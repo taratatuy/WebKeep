@@ -5,8 +5,14 @@
   <h2>My Texts:</h2>
   <% texts.forEach((text) => { %>
   <li>
-    <%= text.text %>
+    <b>
+      <%= text.header %>
+    </b>
+    <br>
+    <%= text.body %>
+    <br>
   </li>
+  <br>
   <% }) %>
 </body>
 
