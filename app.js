@@ -26,6 +26,11 @@ app.get('/myForm', (req, res) => {
   res.sendfile('views/index.html');
 });
 
+app.post('/myForm', (req, res) => {
+  console.log(req.body);
+  res.redirect('/myForm');
+});
+
 app.get('/', (req, res) => {
   TextModel.find({}).then(texts => {
     res.render('index.ejs', { texts: texts });
@@ -36,7 +41,6 @@ app.get('/create', (req, res) => {
   res.render('create.ejs');
 });
 app.post('/create', (req, res) => {
-  console.log(req.body);
   const { createdHead, createdBody } = req.body;
   TextModel.create({
     header: createdHead,
