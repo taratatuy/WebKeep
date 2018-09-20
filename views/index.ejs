@@ -1,0 +1,13 @@
+<% include layout/header.ejs %>
+
+<body>
+  <a href="/create">Click me</a><br>
+  <h2>My Texts:</h2>
+  <% texts.forEach((text) => { %>
+  <li>
+    <%= text.text %>
+  </li>
+  <% }) %>
+</body>
+
+<% include layout/footer.ejs %>
